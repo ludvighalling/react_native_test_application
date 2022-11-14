@@ -4,6 +4,7 @@ import { ToastAndroid, Button, Text, TextInput, View, ScrollView, Image, StyleSh
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { MaterialCommunityIcons } from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ListingAdd } from "./components/ListingAdd"
 import { Observer } from "mobx-react"
 import { addList } from "./ListingAdds"
@@ -150,7 +151,7 @@ const App: () => Node = () => {
   return (
 
     <NavigationContainer>  
-      <BottomTabNav.Navigator initialRouteName='HomeView' barStyle={{backgroundColor: '#5b92eb'}}>
+      <BottomTabNav.Navigator initialRouteName='HomeView' barStyle={{backgroundColor: '#5b92eb'}} screenOptions={{tabBarIconStyle: { display: "none" }}}>
         <BottomTabNav.Screen name="HomeView" component={HomeView} options={{ title: "HOME"}} />
         <BottomTabNav.Screen name="CreateAddView" component={CreateAddView} options={{ title: "CREATE ADD"}} />
         <BottomTabNav.Screen name="AddView" component={BrowseAddsView} options={{ title: "ADDS"}} />
