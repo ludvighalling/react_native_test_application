@@ -9,7 +9,7 @@ import { ListingAdd } from "./components/ListingAdd"
 import { Observer } from "mobx-react"
 import { addList } from "./ListingAdds"
 
-import { IMG_DEFAULT, IMG_GUITAR, IMG_JACKSON_RR3 } from './resourse/images';
+import { IMG_DEFAULT } from './resourse/images';
 
 import { launchCamera } from "react-native-image-picker"
 
@@ -130,9 +130,6 @@ function CreateAddView() {
 function BrowseAddsView() {
   return (
     <ScrollView>
-      <ListingAdd imgRequire={IMG_GUITAR} addName="Jackson JS20" price="3000" />
-      <ListingAdd imgRequire={IMG_JACKSON_RR3} addName="Jackson RR3" price="7000" />
-
       <Observer>
         {() => {
           return(
